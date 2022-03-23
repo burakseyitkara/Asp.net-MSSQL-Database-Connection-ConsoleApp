@@ -16,7 +16,7 @@ namespace ConsoleApp5
 
         static void GetSqlConnection()
         {
-            string connectionString = "Data Source=BURAK;Initial Catalog=AdventureWorks2019;Integrated Security=SSPI;";
+            string connectionString = "Data Source= {DbSourceName} ;Initial Catalog={DbName};Integrated Security=SSPI;";
 
             //driver, provider
 
@@ -25,7 +25,7 @@ namespace ConsoleApp5
                 try
                 {
                     connection.Open();
-                    Console.WriteLine("baglanti saglandi");
+                    Console.WriteLine("Connection successfully!");
                 }
                 catch (Exception e)
                 {
